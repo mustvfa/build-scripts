@@ -5,7 +5,7 @@
 # Remove local manifests
 rm -rf .repo/local_manifests
 rm -rf  device/samsung/a21s
-# Initialize repo for Evolution-X
+# Initialize repo
 repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
 git clone https://github.com/samsungexynos850/local_manifests -b slsi .repo/local_manifests
 # Sync
