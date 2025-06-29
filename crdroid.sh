@@ -2,13 +2,8 @@
 
 # ====== BUILD SECTION ======
 
-# Remove local manifests and previous device/vendor/kernel directories
+# Remove local manifests
 rm -rf .repo/local_manifests
-rm -rf device/samsung/a21s
-rm -rf device/samsung/a21s-common
-rm -rf vendor/samsung/a21s
-rm -rf vendor/samsung/a21s-common
-rm -rf kernel/samsung/exynos850
 # Initialize repo
 repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
 git clone https://github.com/samsungexynos850/local_manifests -b slsi .repo/local_manifests
