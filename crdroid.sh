@@ -8,6 +8,9 @@ rm -rf .repo/local_manifests
 repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
 git clone https://github.com/samsungexynos850/local_manifests -b slsi .repo/local_manifests
 # Sync
+cd /clang/host/linux-x86
+git clean -fdx
+git reset --hard
 repo sync -j1 --fail-fast
 # Clone device/vendor/kernel repositories
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common  vendor/samsung/a21s-common -b lineage-22.2
