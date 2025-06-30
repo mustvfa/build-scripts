@@ -11,6 +11,7 @@ git clone https://github.com/samsungexynos850/local_manifests -b slsi .repo/loca
 cd /clang/host/linux-x86
 git clean -fdx
 git reset --hard
+cd ..
 repo sync -j1 --fail-fast
 # Clone device/vendor/kernel repositories
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common  vendor/samsung/a21s-common -b lineage-22.2
