@@ -9,7 +9,7 @@ rm -rf .repo/local_manifests
 cd prebuilts/clang/host/linux-x86
 git clean -fdx
 git reset --hard
-cd ..
+cd ../../../..
 # Initialize repo
 repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
 git clone https://github.com/samsungexynos850/local_manifests -b slsi .repo/local_manifests
