@@ -4,7 +4,11 @@
 
 # Remove local manifests
 rm -rf .repo/local_manifests
-
+rm -rf vendor/samsung/a21s-common
+rm -rf vendor/samsung/a21s
+rm -rf device/samsung/a21s-common
+rm -rf device/samsung/a21s
+rm -rf kernel/samsung/exynos850
 # Clean clang prebuilts (fix path!)
 cd prebuilts/clang/host/linux-x86
 git clean -fdx
