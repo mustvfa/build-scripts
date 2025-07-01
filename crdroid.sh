@@ -14,15 +14,8 @@ cd ../../../..
 repo init -u https://github.com/crdroidandroid/android.git -b 15.0 --git-lfs
 git clone https://github.com/samsungexynos850/local_manifests -b slsi .repo/local_manifests
 
-# Sync
-repo sync -j1 --fail-fast
-
-# Remove clone targets to avoid errors
-rm -rf vendor/samsung/a21s-common
-rm -rf vendor/samsung/a21s
-rm -rf device/samsung/a21s-common
-rm -rf device/samsung/a21s
-rm -rf kernel/samsung/exynos850
+# Repo sync (force full sync to fix art.git error)
+repo sync --force-sync -j1 --fail-fast
 
 # Clone device/vendor/kernel repositories
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common  vendor/samsung/a21s-common -b lineage-22.2
@@ -31,8 +24,9 @@ git clone https://github.com/mustafa-dgaf/android_device_samsung_a21s-common dev
 git clone https://github.com/mustafa-dgaf/android_device_samsung_a21s device/samsung/a21s -b lineage-22.2
 git clone https://github.com/samsungexynos850/upstream_exynos850 kernel/samsung/exynos850 -b master
 # Build
-source build/envsetup.sh 
-brunch a21s
+source build/envsetup.sh
+lunch lineage_a21s-userdebug
+mka bacon
 # ====== UPLOAD SECTION ======
 
 # Load local .env variables safely
