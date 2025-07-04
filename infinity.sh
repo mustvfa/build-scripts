@@ -1,10 +1,6 @@
 #!/bin/bash
 
 # ====== BUILD SECTION ======
-
-# WARNING: This will remove all local changes!
-rm -rf .repo/projects
-rm -rf .repo/project-objects
 rm -rf .repo/local_manifests
 # Initialize repo for Evolution-X
 repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault
