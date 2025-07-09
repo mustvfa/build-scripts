@@ -12,7 +12,7 @@ hardware/samsung_slsi-linaro/exynos5 \
 hardware/samsung_slsi-linaro/graphics \
 hardware/samsung_slsi-linaro/interfaces \
 hardware/samsung_slsi-linaro/openmax
-# Initialize repo for Evolution-X
+# Initialize repo 
 repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 15 -g default,-mips,-darwin,-notdefault
 git clone https://github.com/samsungexynos850/local_manifests -b aosp .repo/local_manifests
 rm -rf prebuilts/clang/host/linux-x86
