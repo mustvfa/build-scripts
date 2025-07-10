@@ -33,4 +33,4 @@ git clone https://github.com/tryinsmth/android_device_samsung_a21s device/samsun
 git clone https://github.com/mustafa-dgaf/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 # Build
 source build/envsetup.sh 
-lunch infinity_a21-userdebug && mka bacon
+lunch infinity_a21s-userdebug && mka bacon
