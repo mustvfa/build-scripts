@@ -17,6 +17,10 @@ vendor/samsung/a21s \
 device/samsung/a21s-common \
 device/samsung/a21s \
 kernel/samsung/exynos850 \
+prebuilts/kernel-build-tools \
+prebuilts/tools-lineage \
+vendor/kernel_build \
+vendor/google/build/config.mk \
 out/
 
 # Initialize repo 
