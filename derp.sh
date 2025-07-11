@@ -3,7 +3,7 @@
 rm -rf .repo/local_manifests
 # Initialize repo 
 repo init -u https://github.com/DerpFest-AOSP/android_manifest.git -b 16 --git-lfs
-git clone https://github.com/samsungexynos850/local_manifests -b aosp .repo/local_manifests
+git clone https://github.com/samsungexynos850/local_manifests -b slsi .repo/local_manifests
 #repo sync fix
 rm -rf prebuilts/clang/host/linux-x86
 # Sync
