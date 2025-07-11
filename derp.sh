@@ -15,4 +15,4 @@ git clone https://github.com/mustafa-dgaf/android_device_samsung_a21s-common dev
 git clone https://github.com/mustafa-dgaf/android_device_samsung_a21s device/samsung/a21s -b lineage-23.0
 git clone https://github.com/mustafa-dgaf/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 # 🍽️ Lunch time
-source build/envsetup.sh && lunch lineage_a21s-bp1a-userdebug && mka derp
+source build/envsetup.sh && lunch lineage_a21s-bp2a-userdebug && mka derp
