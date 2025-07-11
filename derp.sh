@@ -1,6 +1,12 @@
 #!/bin/bash
-# Fresh manifest cleanup
+# Fresh 
 rm -rf .repo/local_manifests
+rm -rf \
+vendor/samsung/a21s-common \
+vendor/samsung/a21s \
+device/samsung/a21s-common \
+device/samsung/a21s \
+kernel/samsung/exynos850
 # Initialize repo 
 repo init -u https://github.com/DerpFest-AOSP/android_manifest.git -b 16 --git-lfs
 git clone https://github.com/samsungexynos850/local_manifests -b slsi .repo/local_manifests
