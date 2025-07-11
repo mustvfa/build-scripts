@@ -1,10 +1,6 @@
 #!/bin/bash
-
-# ====== BUILD SECTION ======
-
 # Remove local manifests
 rm -rf .repo/local_manifests
-
 # Initialize repo for Evolution-X
 repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs
 git clone https://github.com/samsungexynos850/local_manifests -b slsi .repo/local_manifests
