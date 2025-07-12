@@ -8,7 +8,6 @@ git clone https://github.com/samsungexynos850/local_manifests -b slsi .repo/loca
 rm -rf prebuilts/clang/host/linux-x86
 # Sync
 /opt/crave/resync.sh
-repo sync -c --force-sync --no-clone-bundle --no-tags
 ######
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common  vendor/samsung/a21s-common -b lineage-22.2
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-22.2
