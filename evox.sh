@@ -4,6 +4,8 @@ rm -rf .repo/local_manifests
 # Initialize repo for Evolution-X
 repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs
 git clone https://github.com/samsungexynos850/local_manifests -b slsi .repo/local_manifests
+#####
+rm -rf prebuilts/clang/host/linux-x86
 # Sync
 /opt/crave/resync.sh
 repo sync -c --force-sync --no-clone-bundle --no-tags
