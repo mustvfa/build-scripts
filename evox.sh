@@ -11,11 +11,7 @@ echo "==============================================================="
 # Local manifests
 git clone https://github.com/samsungexynos850/local_manifests -b slsi .repo/local_manifests
 
-# Clean clang before sync
-rm -rf prebuilts/clang/host/linux-x86
-
 # Repo sync
-/opt/crave/resync.sh
 repo sync -c -j4 --force-sync --no-clone-bundle --no-tags
 echo "======================= Repo Sync Done =========================="
 
@@ -33,10 +29,6 @@ git clone https://github.com/samsungexynos850/upstream_exynos850 kernel/samsung/
 echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
-
-# Export build info
-export BUILD_USERNAME=Mustafa
-export BUILD_HOSTNAME=crave
 
 #build signing
 git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys && cd vendor/evolution-priv/keys && ./keys.sh
