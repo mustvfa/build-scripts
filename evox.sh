@@ -47,7 +47,7 @@ export BUILD_USERNAME=Mustafa
 export BUILD_HOSTNAME=crave
 
 #build signing
-croot && git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys && cd vendor/evolution-priv/keys && ./keys.sh
+git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys && cd vendor/evolution-priv/keys && ./keys.sh
 cd ../../..
 
 # Build
