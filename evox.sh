@@ -2,15 +2,6 @@
 
 echo "====================== BUILD STARTED ======================"
 
-# Cleanup old trees
-rm -rf .repo/local_manifests
-rm -rf device/samsung/a21s
-rm -rf device/samsung/a21s-common
-rm -rf vendor/samsung/a21s
-rm -rf vendor/samsung/a21s-common
-rm -rf kernel/samsung/exynos850
-rm -rf out/
-
 # ROM source init
 repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs
 echo "==============================================================="
