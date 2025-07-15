@@ -21,7 +21,6 @@ echo "======================= Repo Sync Done =========================="
 
 #errors fixs
 rm -rf hardware/samsung/hidl/touch
-cd bionic && git revert b4ff0ab97d633f532480977b079ff26ba19ecd64 && cd ..
 
 # Clone device/vendor/kernel trees
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-22.2
