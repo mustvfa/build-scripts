@@ -26,6 +26,14 @@ git clone https://github.com/mustafa-dgaf/android_device_samsung_a21s-common dev
 git clone https://github.com/mustafa-dgaf/android_device_samsung_a21s device/samsung/a21s -b lineage-23.0
 git clone https://github.com/mustafa-dgaf/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 
+#reset commits to just before 5.15 commit
+cd kernel/samsung/exynos850 && \
+git reset --hard 39b0138abf46e230ed9d0fd6b9d01c606aa0379a && \
+cd ../../.. || {
+    echo "Kernel reset failed!" >&2
+    exit 1
+}
+
 echo "========== All Sources Cloned Successfully =========="
 
 # Setup and build
