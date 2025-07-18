@@ -1,2 +1,1 @@
-# build-script
-dont readme
+wyd here??
