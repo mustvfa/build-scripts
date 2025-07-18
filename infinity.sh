@@ -17,6 +17,7 @@ rm -rf prebuilts/clang/host/linux-x86
 
 # Repo sync
 /opt/crave/resync.sh
+repo sync -c -j4 --force-sync --no-clone-bundle --no-tags
 echo "======================= Repo Sync Done =========================="
 
 # Clone device/vendor/kernel trees
