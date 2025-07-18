@@ -23,16 +23,12 @@ echo "======================= Repo Sync Done =========================="
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-22.2
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-22.2
 git clone https://github.com/tryinsmth/android_device_samsung_a21s-common device/samsung/a21s-common -b lineage-22.2
-git clonehttps://github.com/tryinsmth/android_device_samsung_a21s device/samsung/a21s -b lineage-22.2
-git clone https://github.com/samsungexynos850/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
+git clone https://github.com/tryinsmth/android_device_samsung_a21s device/samsung/a21s -b lineage-22.2
+git clone https://github.com/mustafa-dgaf/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 
 echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
-
-# Export build info
-export BUILD_USERNAME=Mustafa
-export BUILD_HOSTNAME=crave
 
 #build signing
 git clone https://github.com/ProjectInfinity-X/vendor_infinity-priv_keys-template vendor/infinity-priv/keys && cd vendor/infinity-priv/keys && ./keys.sh
