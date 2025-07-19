@@ -9,7 +9,7 @@ echo "---------------------- Repo Init Success ----------------------"
 echo "==============================================================="
 
 # Local manifests
-git clone https://github.com/samsungexynos850/local_manifests -b aosp .repo/local_manifests
+git clone https://github.com/mustafa-dgaf/local_manifests- -b aosp .repo/local_manifests
 
 # Clean clang before sync
 rm -rf prebuilts/clang/host/linux-x86
