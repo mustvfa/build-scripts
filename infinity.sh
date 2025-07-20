@@ -2,13 +2,24 @@
 
 echo "====================== BUILD STARTED ======================"
 
-# ROM source init
+# ROM source init 
 repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 echo "==============================================================="
 echo "---------------------- Repo Init Success ----------------------"
 echo "==============================================================="
 
-#errors fixs
+# Local manifests 
+git clone https://github.com/mustafa-dgaf/local_manifests- -b aosp .repo/local_manifests
+
+# fix
+rm -rf prebuilts/clang/host/linux-x86
+
+# Repo sync
+/opt/crave/resync.sh
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j4
+echo "======================= Repo Sync Done =========================="
+
+# errors fixs
 rm -rf hardware/samsung/doze
 rm -rf hardware/samsung/AdvancedDisplay
 
@@ -25,31 +36,17 @@ git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung_
 git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_interfaces hardware/samsung_slsi-linaro/interfaces
 git clone -b lineage-22.2 https://github.com/mustafa-dgaf/android_hardware_samsung_slsi-linaro_openmax hardware/samsung_slsi-linaro/openmax
 
-# Local manifests
-git clone https://github.com/mustafa-dgaf/local_manifests- -b aosp .repo/local_manifests
-
-# Clean clang before sync
-rm -rf prebuilts/clang/host/linux-x86
-
-# Repo sync
-/opt/crave/resync.sh
-repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j4
-echo "======================= Repo Sync Done =========================="
-
-# Clone device/vendor/kernel trees
+#dt
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-22.2
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-22.2
 git clone https://github.com/tryinsmth/android_device_samsung_a21s-common device/samsung/a21s-common -b lineage-22.2
 git clone https://github.com/tryinsmth/android_device_samsung_a21s device/samsung/a21s -b lineage-22.2
-git clone https://github.com/mustafa-dgaf/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
+git clone --depth=1 https://github.com/mustafa-dgaf/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 
-#reset commits to just before 5.15 commit
-cd kernel/samsung/exynos850 && \
-git reset --hard 39b0138abf46e230ed9d0fd6b9d01c606aa0379a && \
-cd ../../.. || {
-    echo "Kernel reset failed!" >&2
-    exit 1
-}
+# Kernel reset to known good commit
+cd kernel/samsung/exynos850
+git reset --hard 39b0138abf46e230ed9d0fd6b9d01c606aa0379a
+cd ../../..
 
 echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
