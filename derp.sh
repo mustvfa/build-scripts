@@ -2,13 +2,13 @@
 echo "====================== BUILD STARTED ======================"
 
 # ROM source init
-repo init -u https://github.com/DerpFest-AOSP/android_manifest.git -b 16 --git-lfs
+repo init -u https://github.com/DerpFest-AOSP/manifest.git -b 13
 echo "==============================================================="
 echo "---------------------- Repo Init Success ----------------------"
 echo "==============================================================="
 
 # Local manifests
-git clone https://github.com/mustafa-dgaf/local_manifests- -b slsi .repo/local_manifests
+git clone https://github.com/mustafa-dgaf/local_manifests- -b lineage-20 .repo/local_manifests
 
 # Clean clang before sync
 rm -rf prebuilts/clang/host/linux-x86
@@ -17,9 +17,6 @@ rm -rf prebuilts/clang/host/linux-x86
 /opt/crave/resync.sh
 repo sync -c -j4 --force-sync --no-clone-bundle --no-tags
 echo "======================= Repo Sync Done =========================="
-
-#errors fixs
-git clone -b lineage-22.2 https://github.com/mustafa-dgaf/android_hardware_samsung_slsi-linaro_openmax hardware/samsung_slsi-linaro/openmax
 
 # Clone device/vendor/kernel trees
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-22.2
