@@ -12,7 +12,7 @@ echo "==============================================================="
 git clone https://github.com/mustafa-dgaf/local_manifests- -b aosp .repo/local_manifests
 
 # Repo sync
-repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags --prune --optimized-fetch
+curl https://raw.githubusercontent.com/accupara/docker-images/refs/heads/master/aosp/common/resync.sh | bash
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j4
 echo "======================= Repo Sync Done =========================="
 
@@ -40,10 +40,11 @@ git clone https://github.com/tryinsmth/android_device_samsung_a21s-common device
 git clone https://github.com/tryinsmth/android_device_samsung_a21s device/samsung/a21s -b lineage-22.2
 git clone https://github.com/mustafa-dgaf/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 
-# Kernel reset to known good commit
+# fixs
 cd kernel/samsung/exynos850
 git reset --hard 39b0138abf46e230ed9d0fd6b9d01c606aa0379a
 cd ../../..
+chmod +r vendor/infinity/config/....
 
 echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
