@@ -44,7 +44,7 @@ git clone https://github.com/mustafa-dgaf/upstream_exynos850 kernel/samsung/exyn
 cd kernel/samsung/exynos850
 git reset --hard 39b0138abf46e230ed9d0fd6b9d01c606aa0379a
 cd ../../..
-chmod +r vendor/infinity/config/....
+chmod +r vendor/infinity/config/common_full_phone.mk
 
 echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
@@ -55,4 +55,4 @@ git clone https://github.com/ProjectInfinity-X/vendor_infinity-priv_keys-templat
 cd ../../..
 
 #build
-source build/envsetup.sh && lunch infinity_a21s-bp2a-userdebug && m bacon
+source build/envsetup.sh && lunch infinity_a21s-userdebug && m bacon
