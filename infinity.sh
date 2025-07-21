@@ -3,7 +3,7 @@
 echo "====================== BUILD STARTED ======================"
 
 # ROM source init 
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 echo "==============================================================="
 echo "---------------------- Repo Init Success ----------------------"
 echo "==============================================================="
@@ -11,11 +11,8 @@ echo "==============================================================="
 # Local manifests 
 git clone https://github.com/mustafa-dgaf/local_manifests- -b aosp .repo/local_manifests
 
-# fix
-rm -rf prebuilts/clang/host/linux-x86
-
 # Repo sync
-/opt/crave/resync.sh
+curl https://raw.githubusercontent.com/accupara/docker-images/refs/heads/master/aosp/common/resync.sh | bash
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j4
 echo "======================= Repo Sync Done =========================="
 
@@ -41,7 +38,7 @@ git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common v
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-22.2
 git clone https://github.com/tryinsmth/android_device_samsung_a21s-common device/samsung/a21s-common -b lineage-22.2
 git clone https://github.com/tryinsmth/android_device_samsung_a21s device/samsung/a21s -b lineage-22.2
-git clone --depth=1 https://github.com/mustafa-dgaf/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
+git clone https://github.com/mustafa-dgaf/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 
 # Kernel reset to known good commit
 cd kernel/samsung/exynos850
