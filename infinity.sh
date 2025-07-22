@@ -8,11 +8,8 @@ echo "==============================================================="
 echo "---------------------- Repo Init Success ----------------------"
 echo "==============================================================="
 
-# Local manifests 
-git clone https://github.com/mustafa-dgaf/local_manifests- -b aosp .repo/local_manifests
-
 # Repo sync
-curl https://raw.githubusercontent.com/accupara/docker-images/refs/heads/master/aosp/common/resync.sh | bash
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j4
 echo "======================= Repo Sync Done =========================="
 
