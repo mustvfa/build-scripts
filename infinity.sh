@@ -8,6 +8,9 @@ echo "==============================================================="
 echo "---------------------- Repo Init Success ----------------------"
 echo "==============================================================="
 
+# Crave specific error
+rm -rf prebuilts/clang/host/linux-x86
+
 # Repo sync
 curl https://raw.githubusercontent.com/accupara/docker-images/refs/heads/master/aosp/common/resync.sh | bash
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j4
