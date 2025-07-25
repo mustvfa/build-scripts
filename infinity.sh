@@ -3,7 +3,7 @@
 echo "====================== BUILD STARTED ======================"
 
 # ROM source init 
-repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
+repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 echo "==============================================================="
 echo "---------------------- Repo Init Success ----------------------"
 echo "==============================================================="
