@@ -51,4 +51,5 @@ git clone https://github.com/ProjectInfinity-X/vendor_infinity-priv_keys-templat
 cd ../../..
 
 #build
+ccache -M 100G
 source build/envsetup.sh && lunch infinity_a21s-userdebug && m bacon
