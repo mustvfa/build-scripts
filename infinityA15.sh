@@ -15,6 +15,7 @@ echo "======================= Repo Sync Done =========================="
 
 # errors fixs
 rm -rf hardware/samsung
+echo "=============== hardware/samsung dir got cleaned ================"
 
 #alt to manifest
 git clone -b lineage-22.2 https://github.com/LineageOS/android_device_samsung_slsi_sepolicy device/samsung_slsi/sepolicy
@@ -54,5 +55,13 @@ echo "==============================================================="
 git clone https://github.com/ProjectInfinity-X/vendor_infinity-priv_keys-template vendor/infinity-priv/keys && cd vendor/infinity-priv/keys && ./keys.sh
 cd ../../..
 
+echo "==============================================================="
+echo "-------------------- The Build Got Signed----------------------"
+echo "==============================================================="
+
 #build
 source build/envsetup.sh && lunch infinity_a21s-userdebug && mka bacon
+
+echo "==============================================================="
+echo "-----------The Build Is Done Succefully Build Mafia------------"
+echo "==============================================================="
