@@ -30,6 +30,9 @@ git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung_
 git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_openmax hardware/samsung_slsi-linaro/openmax
 
 git clone https://github.com/ProjectInfinity-X/hardware_samsung_nfc hardware/samsung/nfc
+
+rm -rf  device/infinity/sepolicy
+git clone https://github.com/ProjectInfinity-X/device_infinity_sepolicy device/infinity/sepolicy
 #dt
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-22.2
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-22.2
