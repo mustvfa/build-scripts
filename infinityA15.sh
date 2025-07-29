@@ -23,7 +23,7 @@ git clone -b 15 https://github.com/tryinsmth/vendor_infinity vendor/infinity
 
 #alt to manifest
 git clone -b lineage-22.2 https://github.com/LineageOS/android_device_samsung_slsi_sepolicy device/samsung_slsi/sepolicy
-git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung hardware/samsung
+git clone -b lineage-22.2 https://github.com/tryinsmth/android_hardware_samsung hardware/samsung
 git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung_slsi_libbt hardware/samsung_slsi/libbt
 git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung_slsi_scsc_wifibt_wifi_hal hardware/samsung_slsi/scsc_wifibt/wifi_hal
 git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung_slsi_scsc_wifibt_wpa_supplicant_lib hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib
