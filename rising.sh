@@ -12,11 +12,8 @@ echo "========== Repo Init Completed =========="
 # Clone local manifests
 git clone https://github.com/samsungexynos850/local_manifests -b slsi .repo/local_manifests
 
-# Remove broken or stale clang versions before sync
-rm -rf prebuilts/clang/host/linux-x86
-
 # Start repo sync
-/opt/crave/resync.sh
+repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j$(nproc --all)
 repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j4
 echo "========== Repo Sync Done =========="
 
