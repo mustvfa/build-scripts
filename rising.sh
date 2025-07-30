@@ -20,6 +20,8 @@ echo "========== Repo Sync Done =========="
 #errors fixs
 rm -rf vendor/rising
 git clone https://github.com/mustafa-dgaf/android_vendor_rising vendor/rising
+rm -rf hardware/samsung_slsi-linaro/openmax
+git clone https://github.com/mustafa-dgaf/android_hardware_samsung_slsi-linaro_openmax hardware/samsung_slsi-linaro/openmax
 
 # Clone device/vendor/kernel trees
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-22.2
