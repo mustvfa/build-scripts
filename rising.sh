@@ -12,8 +12,11 @@ echo "========== Repo Init Completed =========="
 # Clone local manifests
 git clone https://github.com/samsungexynos850/local_manifests -b slsi .repo/local_manifests
 
-# Start repo sync
-repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j$(nproc --all)
+# Crave specific error
+rm -rf prebuilts/clang/host/linux-x86
+
+# Repo sync
+curl https://raw.githubusercontent.com/accupara/docker-images/refs/heads/master/aosp/common/resync.sh | bash
 repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j4
 echo "========== Repo Sync Done =========="
 
