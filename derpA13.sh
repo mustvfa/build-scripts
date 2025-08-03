@@ -17,7 +17,7 @@ echo "======================= Repo Sync Done =========================="
 
 # Clone device/vendor/kernel trees
 git clone https://github.com/mustafa-dgaf/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-20
-git clone hhttps://github.com/mustafa-dgaf/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-20
+git clone https://github.com/mustafa-dgaf/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-20
 git clone https://github.com/tyypeshi1/android_device_samsung-common_a21s device/samsung/a21s-common -b lineage-20
 git clone https://github.com/tyypeshi1/android_device_samsung_a21s device/samsung/a21s -b lineage-20
 git clone https://github.com/samsungexynos850/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
