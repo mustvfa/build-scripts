@@ -8,7 +8,7 @@ echo "---------------------- Repo Init Success ----------------------"
 echo "==============================================================="
 
 # Local manifests
-git clone https://github.com/mustafa-dgaf/local_manifests- -b lineage-20 .repo/local_manifests
+git clone https://github.com/mustafa-dgaf/local_manifests- -b slsi .repo/local_manifests
 
 # Repo sync
 repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
