@@ -39,7 +39,7 @@ echo "-------------------- The Build Got Signed----------------------"
 echo "==============================================================="
 
 #build
-source build/envsetup.sh && axion a21s userdebug va && axionSync && ax -br -j24
+source build/envsetup.sh && axion a21s va && axionSync && ax -br -j24
 
 echo "==============================================================="
 echo "-----------The Build Is Done Succefully Build Mafia------------"
