@@ -12,6 +12,7 @@ git clone https://github.com/mustafa-dgaf/local_manifests- -b slsi .repo/local_m
 
 # Repo sync
 repo sync -j24
+repo sync -j4
 echo "======================= Repo Sync Done =========================="
 
 #dt
