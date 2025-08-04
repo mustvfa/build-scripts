@@ -12,6 +12,7 @@ git clone https://github.com/mustafa-dgaf/local_manifests- -b slsi .repo/local_m
 
 # Repo sync
 axionSync
+repo sync -j4
 echo "======================= Repo Sync Done =========================="
 
 #dt
@@ -38,7 +39,7 @@ echo "-------------------- The Build Got Signed----------------------"
 echo "==============================================================="
 
 #build
-source build/envsetup.sh && axion a21s && ax -br -j24
+source build/envsetup.sh && axion a21s va && ax -br -j24
 
 echo "==============================================================="
 echo "-----------The Build Is Done Succefully Build Mafia------------"
