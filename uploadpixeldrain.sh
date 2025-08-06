@@ -65,11 +65,3 @@ if [[ -f "$recovery_img" ]]; then
 else
   echo "No recovery.img found in $DEVICE_PATH"
 fi
-
-# ========== Kernel Upload ==========
-kernel_file="$DEVICE_PATH/kernel"
-if [[ -f "$kernel_file" ]]; then
-  upload_file "$kernel_file" "A21s Kernel"
-else
-  echo "No kernel file found at $kernel_file"
-fi
