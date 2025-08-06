@@ -13,6 +13,11 @@ git clone https://github.com/mustafa-dgaf/local_manifests- -b slsi .repo/local_m
 # Repo sync
 repo sync -j24
 echo "======================= Repo Sync Done =========================="
+#errora fixs
+rm -rf vendor/gapps/arm/Android.bp
+rm -rf vendor/gapps/arm64/Android.bp
+rm -rf build/
+git clone https://github.com/mustafa-dgaf/android_build build/
 
 #dt
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-23.0
