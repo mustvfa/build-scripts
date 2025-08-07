@@ -15,12 +15,15 @@ repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune 
 repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j4
 echo "======================= Repo Sync Done =========================="
 
+# a16 fix
+rm -rf  hardware/samsung_slsi-linaro/openmax
+git clone -b lineage-22.2 https://github.com/mustafa-dgaf/android_hardware_samsung_slsi-linaro_openmax hardware/samsung_slsi-linaro/openmax
 
 #dt
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-23.0
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-23.0
-git clone https://github.com/tryinsmth/android_device_samsung_a21s-common device/samsung/a21s-common -b mist
-git clone https://github.com/tryinsmth/android_device_samsung_a21s device/samsung/a21s -b mist
+git clone https://github.com/mustafa-dgaf/android_device_samsung_a21s-common device/samsung/a21s-common -b mist
+git clone https://github.com/mustafa-dgaf/android_device_samsung_a21s device/samsung/a21s -b mist
 git clone https://github.com/mustafa-dgaf/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 
 # fixs
