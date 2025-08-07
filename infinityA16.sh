@@ -32,7 +32,7 @@ git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung_
 git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_exynos5 hardware/samsung_slsi-linaro/exynos5
 git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_graphics hardware/samsung_slsi-linaro/graphics
 git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung_slsi-linaro_interfaces hardware/samsung_slsi-linaro/interfaces
-git clone -b lineage-22.2 https://github.com/mustafa-dgaf/android_hardware_samsung_slsi-linaro_openmax hardware/samsung_slsi-linaro/openmax
+git clone -b lineage-22.2 https://github.com/mustvfa/android_hardware_samsung_slsi-linaro_openmax hardware/samsung_slsi-linaro/openmax
 
 git clone https://github.com/ProjectInfinity-X/hardware_samsung_nfc hardware/samsung/nfc
 #dt
@@ -40,7 +40,7 @@ git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common v
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-22.2
 git clone https://github.com/tryinsmth/android_device_samsung_a21s-common device/samsung/a21s-common -b lineage-22.2
 git clone https://github.com/tryinsmth/android_device_samsung_a21s device/samsung/a21s -b lineage-22.2
-git clone https://github.com/mustafa-dgaf/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
+git clone https://github.com/mustvfa/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 
 # fixs
 cd kernel/samsung/exynos850
