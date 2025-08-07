@@ -37,7 +37,7 @@ echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
 
 #signing the build
-git clone https://github.com/mustafa-dgaf/vendor_lineage-priv_keys vendor/lineage-priv/keys
+git clone https://github.com/mustafa-dgaf/crave_aosp_builder vendor/lineage-priv/keys
 
 #build
 source build/envsetup.sh && mistify a21s userdebug && mist b
