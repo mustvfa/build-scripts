@@ -7,23 +7,29 @@ echo "==============================================================="
 echo "---------------------- Repo Init Success ----------------------"
 echo "==============================================================="
 
-#
+#local manifests
 git clone https://github.com/mustafa-dgaf/local_manifests- -b slsi .repo/local_manifests
 
+# Crave specific error
+rm -rf prebuilts/clang/host/linux-x86
+
 # Repo sync
-repo sync -j24
+curl https://raw.githubusercontent.com/accupara/docker-images/refs/heads/master/aosp/common/resync.sh | bash
+repo sync -j4
 echo "======================= Repo Sync Done =========================="
-#errora fixs
+
+#errors fixs
 rm -rf vendor/gapps/arm/Android.bp
 rm -rf vendor/gapps/arm64/Android.bp
-rm -rf build/
-git clone https://github.com/mustafa-dgaf/android_build build/
-
+rm -rf build/envsetup.sh
+git clone https://github.com/mustafa-dgaf/android_build bruh/
+cp bruh/envsetup.sh build/
+rm -rf bruh/
 #dt
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-23.0
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-23.0
 git clone https://github.com/mustafa-dgaf/android_device_samsung_a21s-common device/samsung/a21s-common -b lineage-23.0
-git clone https://github.com/mustafa-dgaf/android_device_samsung_a21s device/samsung/a21s -b lineage-23.0
+git clone https://github.com/mustafa-dgaf/android_device_samsung_a21s device/samsung/a21s -b axion
 git clone https://github.com/mustafa-dgaf/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 
 # fixs
@@ -34,17 +40,11 @@ cd ../../..
 echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
-
-#build signing
-gk -s
-
-echo "==============================================================="
-echo "-------------------- The Build Got Signed----------------------"
-echo "==============================================================="
-
 #build
-source build/envsetup.sh && axion a21s va && ax -br -j24
+source build/envsetup.sh && axionSync
+axion a21s va && ax -br -j24
 
+rm -rf out/target/product/a21s/lineage_a21s-ota.zip
 echo "==============================================================="
 echo "-----------The Build Is Done Succefully Build Mafia------------"
 echo "==============================================================="
