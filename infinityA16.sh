@@ -3,16 +3,13 @@
 echo "====================== BUILD STARTED ======================"
 
 # ROM source init 
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 echo "==============================================================="
 echo "---------------------- Repo Init Success ----------------------"
 echo "==============================================================="
 
-# Crave specific error
-rm -rf prebuilts/clang/host/linux-x86
-
 # Repo sync
-curl https://raw.githubusercontent.com/accupara/docker-images/refs/heads/master/aosp/common/resync.sh | bash
+repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j4
 echo "======================= Repo Sync Done =========================="
 
@@ -38,8 +35,8 @@ git clone https://github.com/ProjectInfinity-X/hardware_samsung_nfc hardware/sam
 #dt
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-22.2
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-22.2
-git clone https://github.com/tryinsmth/android_device_samsung_a21s-common device/samsung/a21s-common -b lineage-22.2
-git clone https://github.com/tryinsmth/android_device_samsung_a21s device/samsung/a21s -b lineage-22.2
+git clone https://github.com/mustvfa/android_device_samsung_a21s-common device/samsung/a21s-common -b lineage-22.2
+git clone https://github.com/mustvfa/android_device_samsung_a21s device/samsung/a21s -b lineage-22.2
 git clone https://github.com/mustvfa/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 
 # fixs
