@@ -30,7 +30,7 @@ git clone https://github.com/mustvfa/upstream_exynos850 kernel/samsung/exynos850
 cd kernel/samsung/exynos850
 git reset --hard 39b0138abf46e230ed9d0fd6b9d01c606aa0379a
 cd ../../..
-chmod +r vendor/mist/config/common_full_phone.mk
+chmod +r vendor/lineage/config/common_full_phone.mk
 
 echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
