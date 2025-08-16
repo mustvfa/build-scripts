@@ -20,6 +20,7 @@ echo "======================= Repo Sync Done =========================="
 
 #errors fixs
 rm -rf hardware/samsung/hidl/touch
+rm -rf hardware/samsung_slsi-linaro/openmax
 git clone -b lineage-22.2 https://github.com/mustvfa/android_hardware_samsung_slsi-linaro_openmax hardware/samsung_slsi-linaro/openmax
 
 # Clone device/vendor/kernel trees
@@ -27,7 +28,7 @@ git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common v
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-23.0
 git clone https://github.com/mustvfa/android_device_samsung_a21s-common device/samsung/a21s-common -b evox
 git clone https://github.com/mustvfa/android_device_samsung_a21s device/samsung/a21s -b evox
-git clone https://github.com/samsungexynos850/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
+git clone https://github.com/mustvfa/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 
 # kernel
 cd kernel/samsung/exynos850
