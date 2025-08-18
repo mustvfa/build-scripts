@@ -2,7 +2,7 @@ repo init -u https://github.com/DerpFest-LOS/android_manifest.git -b 15.2 --git-
 git clone https://github.com/mustafa-dgaf/local_manifests- -b slsi .repo/local_manifests
 rm -rf prebuilts/clang/host/linux-x86
 /opt/crave/resync.sh
-repo sync
+repo sync -j4
 git clone https://github.com/Exynos9611Development/android_device_samsung_a51 device/samsung/a51
 git clone https://github.com/Exynos9611Development/android_vendor_samsung_a51 vendor/samsung/a51
 git clone https://github.com/Exynos9611Development/android_kernel_samsung_universal9611 kernel/samsung/universal9611
