@@ -7,6 +7,6 @@ git clone https://github.com/Exynos9611Development/android_device_samsung_a51 de
 git clone https://github.com/Exynos9611Development/android_vendor_samsung_a51 vendor/samsung/a51
 git clone https://github.com/Exynos9611Development/android_kernel_samsung_universal9611 kernel/samsung/universal9611
 git clone https://github.com/Exynos9611Development/android_vendor_samsung_universal9611-common vendor/samsung/universal9611-common
-git clone https://github.com/Exynos9611Development/android_device_samsung_universal9611-common  device/samsung/universal9611-common
+git clone https://github.com/Exynos9611Development/android_device_samsung_universal9611-common device/samsung/universal9611-common
 source build/envsetup.sh
 lunch lineage_a51-bp1a-userdebug && mka derp
