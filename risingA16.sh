@@ -33,11 +33,6 @@ git clone https://github.com/mustvfa/android_device_samsung_a21s-common device/s
 git clone https://github.com/mustvfa/android_device_samsung_a21s device/samsung/a21s -b rise
 git clone https://github.com/mustvfa/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 
-# fixs
-cd kernel/samsung/exynos850
-git reset --hard 39b0138abf46e230ed9d0fd6b9d01c606aa0379a
-cd ../../..
-
 echo "========== All Sources Cloned Successfully =========="
 
 # Setup and build
