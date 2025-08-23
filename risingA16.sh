@@ -25,6 +25,8 @@ rm -rf vendor/rising
 git clone https://github.com/mustvfa/android_vendor_rising vendor/rising
 rm -rf hardware/samsung_slsi-linaro/openmax
 git clone https://github.com/mustvfa/android_hardware_samsung_slsi-linaro_openmax hardware/samsung_slsi-linaro/openmax
+rm -rf hardware/samsung
+git clone https://github.com/mustvfa/android_hardware_samsung hardware/samsung
 
 # Clone device/vendor/kernel trees
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-23.0
