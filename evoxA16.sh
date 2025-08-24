@@ -22,6 +22,8 @@ echo "======================= Repo Sync Done =========================="
 rm -rf hardware/samsung/hidl/touch
 rm -rf hardware/samsung_slsi-linaro/openmax
 git clone -b lineage-22.2 https://github.com/mustvfa/android_hardware_samsung_slsi-linaro_openmax hardware/samsung_slsi-linaro/openmax
+rm -rf hardware/samsung/hidl/fastcharge
+rm -rf hardware/samsung/hidl/livedisplay
 
 # Clone device/vendor/kernel trees
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-23.0
