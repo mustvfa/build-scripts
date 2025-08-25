@@ -19,8 +19,6 @@ repo sync -j4
 echo "======================= Repo Sync Done =========================="
 
 #errors fixs
-rm -rf vendor/gapps/arm/Android.bp
-rm -rf vendor/gapps/arm64/Android.bp
 rm -rf hardware/samsung_slsi-linaro/openmax
 git clone -b lineage-22.2 https://github.com/mustvfa/android_hardware_samsung_slsi-linaro_openmax hardware/samsung_slsi-linaro/openmax
 
