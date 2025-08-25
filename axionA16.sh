@@ -36,7 +36,7 @@ echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
 #build
 source build/envsetup.sh && axionSync
-axion a21s va && ax -br -j24
+axion a21s && ax -br
 
 rm -rf out/target/product/a21s/lineage_a21s-ota.zip
 echo "==============================================================="
