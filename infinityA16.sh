@@ -36,15 +36,9 @@ git clone https://github.com/ProjectInfinity-X/hardware_samsung_nfc hardware/sam
 #dt
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-23.0
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-23.0
-git clone https://github.com/mustvfa/android_device_samsung_a21s-common device/samsung/a21s-common -b infinityx
+git clone https://github.com/mustvfa/android_device_samsung_a21s-common device/samsung/a21s-common -b infx
 git clone https://github.com/mustvfa/android_device_samsung_a21s device/samsung/a21s -b infinityx
-git clone https://github.com/mustvfa/upstream_exynos850 kernel/samsung/exynos850 -b lineage-23.0
-
-# fixs
-cd kernel/samsung/exynos850
-git reset --hard 39b0138abf46e230ed9d0fd6b9d01c606aa0379a
-cd ../../..
-chmod +r vendor/infinity/config/common_full_phone.mk
+git clone https://github.com/mustvfa/upstream_exynos850 kernel/samsung/exynos850 -b master
 
 echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
