@@ -44,8 +44,11 @@ echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
 
+#errors fixs
 rm -rf hardware/samsung/hidl/fastcharge/
 rm -rf hardware/samsung/hidl/livedisplay/
+rm -rf device/samsung_slsi/sepolicy/common/vendor/hal_lineage_fastcharge_default.te
+sed -i '/fastcharge/d' device/samsung_slsi/sepolicy/common/vendor/file_contexts
 
 #build signing
 git clone https://github.com/ProjectInfinity-X/vendor_infinity-priv_keys-template vendor/infinity-priv/keys && cd vendor/infinity-priv/keys && ./keys.sh
