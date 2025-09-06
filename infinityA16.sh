@@ -21,8 +21,6 @@ git clone -b 16 https://github.com/ProjectInfinity-X/vendor_infinity vendor/infi
 #alt to manifest
 git clone -b lineage-22.2 https://github.com/LineageOS/android_device_samsung_slsi_sepolicy device/samsung_slsi/sepolicy
 git clone -b lineage-22.2 https://github.com/tryinsmth/android_hardware_samsung hardware/samsung
-hardware/samsung/hidl/fastcharge/
-hardware/samsung/hidl/livedisplay/
 git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung_slsi_libbt hardware/samsung_slsi/libbt
 git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung_slsi_scsc_wifibt_wifi_hal hardware/samsung_slsi/scsc_wifibt/wifi_hal
 git clone -b lineage-22.2 https://github.com/LineageOS/android_hardware_samsung_slsi_scsc_wifibt_wpa_supplicant_lib hardware/samsung_slsi/scsc_wifibt/wpa_supplicant_lib
@@ -45,6 +43,9 @@ git clone https://github.com/mustvfa/upstream_exynos850 kernel/samsung/exynos850
 echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
+
+rm -rf hardware/samsung/hidl/fastcharge/
+rm -rf hardware/samsung/hidl/livedisplay/
 
 #build signing
 git clone https://github.com/ProjectInfinity-X/vendor_infinity-priv_keys-template vendor/infinity-priv/keys && cd vendor/infinity-priv/keys && ./keys.sh
