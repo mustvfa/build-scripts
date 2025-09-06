@@ -16,7 +16,7 @@ echo "======================= Repo Sync Done =========================="
 # errors fixs
 rm -rf hardware/samsung
 rm -rf vendor/infinity
-git clone -b 16 https://github.com/tryinsmth/vendor_infinity vendor/infinity
+git clone -b 16 https://github.com/ProjectInfinity-X/vendor_infinity vendor/infinity
 
 #alt to manifest
 git clone -b lineage-22.2 https://github.com/LineageOS/android_device_samsung_slsi_sepolicy device/samsung_slsi/sepolicy
