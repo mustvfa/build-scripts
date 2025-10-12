@@ -7,6 +7,14 @@ echo "==============================================================="
 echo "---------------------- Repo Init Success ----------------------"
 echo "==============================================================="
 
+#clean
+rm -rf device/samsung/a21s-common
+rm -rf device/samsung/a21s
+rm -rf vendor/samsung/a21s-common
+rm -rf vendor/samsung/a21s
+rm -rf kernel/samsung/exynos850
+rm -rf .repo/local_manifests
+
 #manifest
 git clone https://github.com/mustvfa/local_manifests -b slsi .repo/local_manifests
 
