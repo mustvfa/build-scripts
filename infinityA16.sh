@@ -18,6 +18,9 @@ echo "======================= Repo Sync Done =========================="
 
 # errors fixs
 rm -rf hardware/samsung
+git clone https://github.com/LineageOS/android_hardware_samsung hardware/samsung -b lineage-23.0
+rm -rf hardware/samsung/hidl/fastcharge/
+rm -rf hardware/samsung/hidl/livedisplay/
 rm -rf vendor/infinity
 git clone -b 16 https://github.com/ProjectInfinity-X/vendor_infinity vendor/infinity
 
@@ -41,8 +44,6 @@ echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
 
 #errors fixs
-rm -rf hardware/samsung/hidl/fastcharge/
-rm -rf hardware/samsung/hidl/livedisplay/
 rm -rf device/samsung_slsi/sepolicy/common/vendor/hal_lineage_fastcharge_default.te
 sed -i '/fastcharge/d' device/samsung_slsi/sepolicy/common/vendor/file_contexts
 
