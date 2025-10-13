@@ -4,7 +4,7 @@
 repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.0 --git-lfs
 
 #local manifests
-git clone https://github.com/mustvfa/local_manifests- -b slsi .repo/local_manifests
+git clone https://github.com/mustvfa/local_manifests -b slsi .repo/local_manifests
 
 # Repo sync
 repo sync
@@ -15,7 +15,7 @@ echo "======================= Repo Sync Done =========================="
 rm -rf hardware/samsung_slsi-linaro/openmax
 git clone -b lineage-22.2 https://github.com/mustvfa/android_hardware_samsung_slsi-linaro_openmax hardware/samsung_slsi-linaro/openmax
 rm -rf hardware/samsung
-git clone https://github.com/mustvfa/android_hardware_samsung hardware/samsung
+git clone https://github.com/LineageOS/android_hardware_samsung hardware/samsung -b lineage-23.0
 rm -rf device/samsung_slsi/sepolicy/common/vendor/hal_lineage_fastcharge_default.te
 sed -i '/fastcharge/d' device/samsung_slsi/sepolicy/common/vendor/file_contexts
 
