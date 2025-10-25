@@ -11,8 +11,8 @@ echo "==============================================================="
 git clone https://github.com/mustvfa/local_manifests -b 22.2 .repo/local_manifests
 
 # Repo sync
-repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
-repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j4
+repo sync -c --force-sync --optimized-fetch -j$(nproc --all)
+repo sync -c --force-sync --optimized-fetch -j4
 echo "======================= Repo Sync Done =========================="
 
 #dt
