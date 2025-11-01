@@ -22,7 +22,7 @@ git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common v
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-23.0
 git clone https://github.com/mustvfa/android_device_samsung_a21s-common device/samsung/a21s-common -b evox
 git clone https://github.com/mustvfa/android_device_samsung_a21s device/samsung/a21s -b evox
-git clone https://github.com/mustvfa/upstream_exynos850 kernel/samsung/exynos850 -b master
+git clone https://github.com/mustvfa/android_kernel_samsung_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 
 git clone https://github.com/Evolution-X/vendor_evolution-priv_keys-template vendor/evolution-priv/keys && cd vendor/evolution-priv/keys && ./keys.sh
 cd ../../..
