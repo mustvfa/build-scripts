@@ -4,7 +4,7 @@
 repo init -u https://github.com/Evolution-X/manifest -b bka --git-lfs
 
 # Local manifests
-git clone https://github.com/mustvfa/local_manifests- -b slsi .repo/local_manifests
+git clone https://github.com/mustvfa/local_manifests -b slsi .repo/local_manifests
 
 # Repo sync
 repo sync -c -j$(nproc --all) --force-sync --no-clone-bundle --no-tags
