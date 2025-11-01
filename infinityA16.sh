@@ -37,7 +37,7 @@ git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common v
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-23.0
 git clone https://github.com/mustvfa/android_device_samsung_a21s-common device/samsung/a21s-common -b infx
 git clone https://github.com/mustvfa/android_device_samsung_a21s device/samsung/a21s -b infinityx
-git clone https://github.com/mustvfa/android_kernel_samsung_exynos850 -b lineage-23.0
+git clone https://github.com/mustvfa/android_kernel_samsung_exynos850 kernel/samsung/exynos850 -b lineage-23.0
 
 echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
