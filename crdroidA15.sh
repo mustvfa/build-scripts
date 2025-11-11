@@ -27,6 +27,7 @@ echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
 
 #build
+git clone git@github.com:crdroidandroid/crdroid-priv.git vendor/lineage-priv
 source build/envsetup.sh && brunch a21s userdebug
 
 echo "==============================================================="
