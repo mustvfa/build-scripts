@@ -11,8 +11,6 @@ repo sync -c -j4 --force-sync --no-clone-bundle --no-tags
 
 #errors fixs
 rm -rf hardware/samsung/hidl/touch
-rm -rf hardware/samsung_slsi-linaro/openmax
-git clone -b lineage-22.2 https://github.com/mustvfa/android_hardware_samsung_slsi-linaro_openmax hardware/samsung_slsi-linaro/openmax
 rm -rf hardware/samsung/hidl/fastcharge
 rm -rf hardware/samsung/hidl/livedisplay
 
