@@ -1,4 +1,4 @@
-#!/bin/bash
+ #!/bin/bash
 echo "====================== BUILD STARTED ======================"
 
 # ROM source init 
@@ -19,7 +19,7 @@ rm -rf .repo/local_manifests
 git clone https://github.com/mustvfa/local_manifests- -b slsi .repo/local_manifests
 
 # Repo sync
-repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j$(nproc --all)
+/opt/crave/resync.sh 
 repo sync -c --force-sync --optimized-fetch --no-tags --no-clone-bundle --prune -j4
 echo "======================= Repo Sync Done =========================="
 
@@ -35,5 +35,4 @@ echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
 
 #build
-git clone git@github.com:crdroidandroid/crdroid-priv.git vendor/lineage-priv
 source build/envsetup.sh && brunch a21s userdebug
