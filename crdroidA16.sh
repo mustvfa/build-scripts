@@ -30,6 +30,9 @@ git clone https://github.com/crdroidandroid/proprietary_vendor_samsung_a21s-comm
 git clone https://github.com/crdroidandroid/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b 16.0
 git clone https://github.com/crdroidandroid/android_kernel_samsung_exynos850 kernel/samsung/exynos850 -b 16.0
 
+#do it locally :DDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDDD
+#git clone https://github.com/crdroidandroid/crdroid-priv vendor/lineage-priv
+
 echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
