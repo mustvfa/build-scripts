@@ -7,7 +7,7 @@ repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.1 --git-lfs
 git clone https://github.com/mustvfa/local_manifests- -b slsi .repo/local_manifests
 
 # Repo sync
-repo sync
+curl https://raw.githubusercontent.com/accupara/docker-images/refs/heads/master/aosp/common/resync.sh | bash
 repo sync -j4
 echo "======================= Repo Sync Done =========================="
 
