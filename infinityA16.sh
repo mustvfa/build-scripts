@@ -9,7 +9,7 @@ echo "---------------------- Repo Init bomb Success ----------------------"
 echo "==============================================================="
 
 #clone manifests
-git clone https://github.com/mustvfa/local_manifests -b slsi .repo/local_manifests
+git clone https://github.com/mustvfa/local_manifests- -b slsi .repo/local_manifests
 
 #repo sync
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
