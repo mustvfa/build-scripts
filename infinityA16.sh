@@ -1,5 +1,13 @@
 #!/bin/bash
 
+# ____   ___  __  __ ____  
+#| __ ) / _ \|  \/  | __ ) 
+#|  _ \| | | | |\/| |  _ \ 
+#| |_) | |_| | |  | | |_) |
+#|____/ \___/|_|  |_|____/
+
+mkdir infx && cd infx
+
 echo "====================== BUILD STARTED ======================"
 
 # ROM source init 
@@ -15,10 +23,6 @@ git clone https://github.com/mustvfa/local_manifests- -b slsi .repo/local_manife
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j$(nproc --all)
 repo sync -c --no-clone-bundle --no-tags --optimized-fetch --prune --force-sync -j4
 echo "======================= Repo Sync Done =========================="
-
-#some errors fixs
-git clone https://github.com/ProjectInfinity-X/device_infinity_sepolicy device/infinity/sepolicy -b 16
-git clone https://github.com/ProjectInfinity-X/hardware_samsung_nfc hardware/samsung/nfc
 
 #dt
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-23.1
@@ -38,6 +42,10 @@ sed -i '/fastcharge/d' device/samsung_slsi/sepolicy/common/vendor/file_contexts
 #build signing
 git clone https://github.com/ProjectInfinity-X/vendor_infinity-priv_keys-template vendor/infinity-priv/keys && cd vendor/infinity-priv/keys && ./keys.sh
 cd ../../..
+
+#yes
+export HOME=/home/mustafa-build/infx/out
+mkdir -p $HOME
 
 #build
 source build/envsetup.sh && lunch infinity_a21s-userdebug && m bacon -j$(nproc --all)
