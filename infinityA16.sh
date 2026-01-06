@@ -28,7 +28,7 @@ echo "======================= Repo Sync Done =========================="
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-23.1
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-23.1
 git clone https://github.com/mustvfa/android_device_samsung_a21s-common device/samsung/a21s-common -b infx
-git clone https://github.com/mustvfa/android_device_samsung_a21s device/samsung/a21s -b infinityx
+git clone https://github.com/mustvfa/android_device_samsung_a21s device/samsung/a21s -b infx
 git clone https://github.com/LineageOS/android_kernel_samsung_exynos850 kernel/samsung/exynos850 -b lineage-23.2
 
 echo "==============================================================="
