@@ -1,19 +1,15 @@
 #!/bin/bash
 
-# ROM source init 
+# init
 repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.1 --git-lfs
 
-#local manifests
+# local manifests
 git clone https://github.com/mustvfa/local_manifests- -b slsi .repo/local_manifests
 
 # Repo sync
 curl https://raw.githubusercontent.com/accupara/docker-images/refs/heads/master/aosp/common/resync.sh | bash
 repo sync -j4
 echo "======================= Repo Sync Done =========================="
-
-#errors fixs
-rm -rf device/samsung_slsi/sepolicy/common/vendor/hal_lineage_fastcharge_default.te
-sed -i '/fastcharge/d' device/samsung_slsi/sepolicy/common/vendor/file_contexts
 
 #dt
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common vendor/samsung/a21s-common -b lineage-23.1
@@ -27,7 +23,7 @@ echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
 #build
 source build/envsetup.sh && axionSync
-axion a21s && gk -s
+axion a21s gms core && gk -s
 ax -br
 
 echo "==============================================================="
