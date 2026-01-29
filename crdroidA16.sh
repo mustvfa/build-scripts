@@ -30,7 +30,8 @@ git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s-common v
 git clone https://github.com/TheMuppets/proprietary_vendor_samsung_a21s vendor/samsung/a21s -b lineage-23.2
 git clone https://github.com/LineageOS/android_kernel_samsung_exynos850 kernel/samsung/exynos850 -b lineage-23.2
 
-git clone https://github.com/crdroidandroid/crdroid-priv vendor/lineage-priv
+rm -rf frameworks/av
+git clone https://github.com/mustvfa/android_frameworks_av frameworks/av
 
 echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
