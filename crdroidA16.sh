@@ -7,9 +7,6 @@ echo "==============================================================="
 echo "---------------------- Repo Init Success ----------------------"
 echo "==============================================================="
 
-rm -rf frameworks/av
-git clone https://github.com/mustvfa/android_frameworks_av frameworks/av
-
 #manifest
 git clone https://github.com/mustvfa/local_manifests- -b slsi .repo/local_manifests
 
@@ -28,3 +25,5 @@ git clone https://github.com/LineageOS/android_kernel_samsung_exynos850 kernel/s
 echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
+
+source build/envsetup.sh && brunch a21s userdebug
