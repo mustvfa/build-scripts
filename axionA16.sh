@@ -23,7 +23,7 @@ echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
 #build
 source build/envsetup.sh && axionSync
-axion a21s gms va && gk -s
+axion a21s va && gk -s
 ax -br
 
 echo "==============================================================="
