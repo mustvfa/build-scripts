@@ -1,6 +1,9 @@
 #!/bin/sh
 
-PATCH_FILE=idk.patch
+PATCH_DIR=/tmp/patches
+PATCH_FILE=$PATCH_DIR/idk.patch
+
+mkdir -p "$PATCH_DIR"
 
 cat > "$PATCH_FILE" <<'EOF'
 From c084f876d0fe35ee8fde64282d7639fc87d4249f Mon Sep 17 00:00:00 2001
