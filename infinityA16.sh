@@ -26,8 +26,8 @@ echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
 
 #errors fixs
-rm -rf device/samsung_slsi/sepolicy/common/vendor/hal_lineage_fastcharge_default.te
-sed -i '/fastcharge/d' device/samsung_slsi/sepolicy/common/vendor/file_contexts
+#rm -rf device/samsung_slsi/sepolicy/common/vendor/hal_lineage_fastcharge_default.te
+#sed -i '/fastcharge/d' device/samsung_slsi/sepolicy/common/vendor/file_contexts
 
 ##ye
 curl -s https://raw.githubusercontent.com/mustvfa/build-scripts/refs/heads/main/idk.sh | bash
