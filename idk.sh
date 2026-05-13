@@ -1,11 +1,11 @@
 #!/bin/sh
 
-PATCH_DIR=/tmp/patches
-PATCH_FILE=$PATCH_DIR/idk.patch
+dir=/tmp/patches
+file=$dir/idk.patch
 
-mkdir -p "$PATCH_DIR"
+mkdir -p "$dir"
 
-cat > "$PATCH_FILE" <<'EOF'
+cat > "$file" <<'EOF'
 --- a/packages/SystemUI/src/com/android/systemui/clocks/ClockStyle.java
 +++ b/packages/SystemUI/src/com/android/systemui/clocks/ClockStyle.java
 @@ -29,6 +29,7 @@
@@ -57,5 +57,4 @@ cat > "$PATCH_FILE" <<'EOF'
                  if (userProfileIcon != null) {
 EOF
 
-# Apply the patch as a commit
-git -C frameworks/base apply "$PATCH_FILE"
+git -C frameworks/base apply "$file"
