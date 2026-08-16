@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # init
-repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.2 --git-lfs --depth 1
+repo init -u https://github.com/AxionAOSP/android.git -b lineage-23.2 --depth=1 --git-lfs
 
 # local manifests
 git clone https://github.com/mustvfa/local_manifests- -b slsi .repo/local_manifests
