@@ -8,6 +8,7 @@ git clone https://github.com/mustvfa/local_manifests- -b slsi .repo/local_manife
 
 # Repo sync
 curl https://raw.githubusercontent.com/accupara/docker-images/refs/heads/master/aosp/common/resync.sh | bash
+repo sync -j4
 echo "======================= Repo Sync Done =========================="
 
 #dt
