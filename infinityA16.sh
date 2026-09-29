@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # ROM source init 
-repo init --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
+repo init --depth=1 --no-repo-verify --git-lfs -u https://github.com/ProjectInfinity-X/manifest -b 16 -g default,-mips,-darwin,-notdefault
 echo "==============================================================="
 echo "---------------------- Repo Init Success ----------------------"
 echo "==============================================================="
@@ -11,7 +11,6 @@ git clone https://github.com/mustvfa/local_manifests- -b slsi .repo/local_manife
 
 #repo sync
 curl https://raw.githubusercontent.com/accupara/docker-images/refs/heads/master/aosp/common/resync.sh | bash
-repo sync -j4
 echo "======================= Repo Sync Done =========================="
 
 #dt
@@ -24,13 +23,6 @@ git clone https://github.com/LineageOS/android_kernel_samsung_exynos850 kernel/s
 echo "==============================================================="
 echo "----------- All Repositories Cloned Successfully -------------"
 echo "==============================================================="
-
-#errors fixs
-#rm -rf device/samsung_slsi/sepolicy/common/vendor/hal_lineage_fastcharge_default.te
-#sed -i '/fastcharge/d' device/samsung_slsi/sepolicy/common/vendor/file_contexts
-
-##ye
-curl -s https://raw.githubusercontent.com/mustvfa/build-scripts/refs/heads/main/idk.sh | bash
 
 #build signing
 git clone https://github.com/ProjectInfinity-X/vendor_infinity-priv_keys-template vendor/infinity-priv/keys && cd vendor/infinity-priv/keys && ./keys.sh
